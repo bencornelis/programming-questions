@@ -16,14 +16,25 @@
 
   <div class="question-content col-md-8">
     <h2 class="page-header">
-      {{model.title}}
-
+      {{#if isEditing}}
+        {{input type="text" class="form-control" value=model.title}}
+      {{else}}
+        {{model.title}}
+      {{/if}}
     </h2>
     <div class="question-text">
-      {{model.text}}
+      {{#if isEditing}}
+        {{textarea rows="10" class="form-control" value=model.text}}
+      {{else}}
+        {{model.text}}
+      {{/if}}
     </div>
 
-    <span class="edit" {{action "edit"}}>Edit</span>
+    {{#if isEditing}}
+      <span class="save" {{action "save"}}>Save Changes</span>
+    {{else}}
+      <span class="edit" {{action "edit"}}>Edit</span>
+    {{/if}}
     <span class="delete text-danger" {{action "delete"}}>Delete</span>
   </div>
 
