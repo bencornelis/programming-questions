@@ -2,19 +2,27 @@
   <div class="col-md-2">
     <div class="vote-sidebar text-center">
       <div class="vote-div">
-        <span class="vote" {{action "upvote"}}>U</span>
+        <span class="vote upvote" {{action "upvote"}}></span>
       </div>
       <div class="vote-div">
         {{model.votes}}
       </div>
       <div class="vote-div">
-        <span class="vote" {{action "downvote"}}>D</span>
+        <span class="vote downvote" {{action "downvote"}}></span>
       </div>
     </div>
   </div>
 
   <div class="col-md-8">
     <h2 class="page-header">{{model.title}}</h2>
+    <div class="question-text">
+      {{model.text}}
+    </div>
+  </div>
 
+  <div class="col-md-2">
+    <div class="question-author-info">
+      asked by {{model.author}}
+    </div>
   </div>
 </div>

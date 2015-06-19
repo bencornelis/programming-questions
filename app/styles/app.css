@@ -7,6 +7,7 @@
   -webkit-box-shadow: 0px 4px 4px 2px #898988;
   box-shadow:         0px 4px 4px 2px #898988;
   padding-top:30px;
+  padding-bottom:15px;
 }
 
 #mini-nav {
@@ -55,16 +56,47 @@
   color:white !important;
 }
 
-.vote:hover {
-  cursor:pointer;
-  color: #FF9900;
-}
-
 .vote-sidebar {
-  margin-top:50px;
+  margin-top:30px;
 }
 
 .vote-div {
   margin:20px;
   font-size:1.5em;
+}
+
+.question-author-info {
+  position:absolute;
+  top:380px;
+  right: 30px;
+}
+
+
+/* found this idea on css-tricks! */
+.upvote {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid #898988;
+}
+
+.downvote {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+
+	border-top: 10px solid #898988;
+}
+
+.upvote:hover {
+  cursor:pointer;
+  border-bottom: 10px solid #FF9900 !important;
+}
+
+.downvote:hover {
+  cursor:pointer;
+  border-top: 10px solid #FF9900 !important;
 }
