@@ -54,3 +54,8 @@
   background-color: #222222 !important;
   color:white !important;
 }
+
+.vote:hover {
+  cursor:pointer;
+  color: #FF9900;
+}

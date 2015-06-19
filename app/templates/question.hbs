@@ -1,1 +1,18 @@
-{{model.title}}
+<div class="row">
+  <div class="col-md-2">
+    <div>
+      <span class="vote" {{action "upvote"}}>U</span>
+    </div>
+    <div>
+      {{model.votes}}
+    </div>
+    <div>
+      <span class="vote" {{action "downvote"}}>D</span>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <h2 class="page-header">{{model.title}}</h2>
+
+  </div>
+</div>

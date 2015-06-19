@@ -1,1 +1,5 @@
-{{outlet}}
+<ul class="list-unstyled list-inline">
+  {{#each tag in model}}
+    <li class='tag'>{{tag.name}}</li>
+  {{/each}}
+</ul>

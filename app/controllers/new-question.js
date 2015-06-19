@@ -13,12 +13,6 @@ export default Ember.Controller.extend({
         votes: 0,
         views: 0
       });
-      // newQuestion.save().then(function() {
-      //   this.get('selectedTags').forEach(function(tag) {
-      //     newQuestion.get('tags').pushObject(tag);
-      //   });
-      //   newQuestion.save()
-      // });
       this.get('selectedTags').forEach(function(tag) {
         newQuestion.get('tags').pushObject(tag);
       });
