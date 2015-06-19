@@ -131,7 +131,7 @@
 }
 
 .question-content {
-  min-height: 300px;
+  min-height: 500px;
 }
 
 .delete {
@@ -142,6 +142,10 @@
 
 .answer {
   position:absolute;
-  top: 260px;
+  top: 460px;
   right: 25px;
+}
+
+.helpful-links {
+  margin-top:100px;
 }

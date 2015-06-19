@@ -47,6 +47,16 @@
           {{post-date-format model.timestamp}}
         </div>
       </div>
+
+      <div class="helpful-links list-group">
+        <h5>Stack Overflow links</h5>
+        <ul class="list-unstyled">
+          {{#each helpfulLink in helpfulLinks}}
+            <li class="list-group-item"><a href={{helpfulLink.link}}>{{helpfulLink.name}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+
       <span class="answer">{{#link-to "new-answer" model}}Add an Answer{{/link-to}}</span>
     </div>
   </div>

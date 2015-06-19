@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   init: function() {
-    this.set('selectedTags', [])
+    this.set('selectedTags', []);
   },
   actions: {
     save: function() {
