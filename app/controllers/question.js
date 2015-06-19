@@ -11,6 +11,10 @@ export default Ember.Controller.extend({
       var question = this.get('model');
       question.decrementProperty('votes');
       question.save();
+    },
+    delete: function() {
+      this.get('model').destroyRecord();
+      this.transitionToRoute('questions');
     }
   }
 });
