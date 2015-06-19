@@ -1,0 +1,26 @@
+<form>
+  <div class="form-group">
+    <label for="title">Title</label>
+    {{input id="title" type="text" class="form-control" value=title placeholder="What's your programming question? Be specific"}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author</label>
+    {{input id="author" type="text" class="form-control" value=author placeholder="Who are you?"}}
+  </div>
+
+  <div class="form-group">
+    {{textarea rows="10" class="form-control" value=text}}
+  </div>
+
+  <div class="form-group">
+    <label>Select the tags for your question</label>
+    <ul class="list-unstyled list-inline">
+      {{#each tag in model}}
+        <li id={{tag.name}} class='tag' {{action "addTag" tag}}>{{tag.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <button class="btn btn-warning" {{action "save"}}>Post your question</button>
+</form>

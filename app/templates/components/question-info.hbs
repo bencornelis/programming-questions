@@ -1,0 +1,55 @@
+<div class="question-info">
+  <div class="row">
+    <div class="stats col-md-2">
+      <ul class="list-unstyled text-center">
+        <li>
+          <div>
+            {{question.votes}}
+          </div>
+          <div>
+            votes
+          </div>
+        </li>
+        <li>
+          <div>
+            {{answerCount}}
+          </div>
+          <div>
+            answers
+          </div>
+        </li>
+        <li>
+          <div>
+            {{question.views}}
+          </div>
+          <div>
+            views
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content col-md-6 col-md-offset-1">
+      <p>
+        {{#link-to "question" question}}{{question.title}}{{/link-to}}
+      </p>
+      <p>
+        {{textSnippet}}
+      </p>
+      <p>
+        <ul class="list-unstyled list-inline">
+          {{#each tag in question.tags}}
+            <li class='tag'>{{tag.name}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+
+    <div class="author col-md-3">
+      <div>
+        asked by {{question.author}}
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

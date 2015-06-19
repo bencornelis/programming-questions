@@ -1,1 +1,5 @@
-{{outlet}}
+<ul class="list-unstyled">
+{{#each question in model}}
+  <li>{{question-info question=question}}</li>
+{{/each}}
+</ul>

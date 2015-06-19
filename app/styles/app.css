@@ -1,12 +1,16 @@
 #main {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  margin-top:200px;
+  border-right: 1px solid #898988;
+  border-left: 1px solid #898988;
+  margin-top:100px;
   min-height:500px;
+  -moz-box-shadow:    0px 4px 4px 2px #898988;
+  -webkit-box-shadow: 0px 4px 4px 2px #898988;
+  box-shadow:         0px 4px 4px 2px #898988;
+  padding-top:30px;
 }
 
 #mini-nav {
-  margin-top:100px;
+  margin-top:80px;
 }
 
 #mini-nav li {
@@ -16,7 +20,7 @@
 }
 
 .nav-link {
-  color: #898988 !important;
+  color: #898988;
 }
 
 .nav-link:hover {
@@ -27,4 +31,26 @@
 
 .selected {
   color: white !important;
+}
+
+.stats li {
+  margin: 10px;
+}
+
+.tag {
+  margin:5px;
+  background: #e4edf4;
+  color: #3e6d8e;
+  padding:3px;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: #222222;
+  color:white;
+}
+
+.selected-tag {
+  background-color: #222222 !important;
+  color:white !important;
 }

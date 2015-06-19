@@ -9,6 +9,10 @@ export default Ember.Controller.extend({
     {
       route: 'tags',
       name: 'Tags'
+    },
+    {
+      route: 'new-question',
+      name: 'Add Question'
     }
   ]
 });
