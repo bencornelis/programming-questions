@@ -1,0 +1,31 @@
+<div class="answer-info">
+  <div class="row">
+    <div class="vote-sidebar text-center col-md-2">
+      <div class="vote-div">
+        <span class="vote upvote" {{action "upvote"}}></span>
+      </div>
+      <div class="vote-div">
+        {{answer.votes}}
+      </div>
+      <div class="vote-div">
+        <span class="vote downvote" {{action "downvote"}}></span>
+      </div>
+    </div>
+
+    <div class="content col-md-6 col-md-offset-1">
+      <p>
+        {{answer.text}}
+      </p>
+    </div>
+
+    <div class="author col-md-3">
+      <div>
+        {{authorDescription}}
+      </div>
+      <div>
+        {{post-date-format answer.timestamp}}
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
