@@ -59,3 +59,12 @@
   cursor:pointer;
   color: #FF9900;
 }
+
+.vote-sidebar {
+  margin-top:50px;
+}
+
+.vote-div {
+  margin:20px;
+  font-size:1.5em;
+}

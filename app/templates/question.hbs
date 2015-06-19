@@ -1,13 +1,15 @@
 <div class="row">
   <div class="col-md-2">
-    <div>
-      <span class="vote" {{action "upvote"}}>U</span>
-    </div>
-    <div>
-      {{model.votes}}
-    </div>
-    <div>
-      <span class="vote" {{action "downvote"}}>D</span>
+    <div class="vote-sidebar text-center">
+      <div class="vote-div">
+        <span class="vote" {{action "upvote"}}>U</span>
+      </div>
+      <div class="vote-div">
+        {{model.votes}}
+      </div>
+      <div class="vote-div">
+        <span class="vote" {{action "downvote"}}>D</span>
+      </div>
     </div>
   </div>
 
