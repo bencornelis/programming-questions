@@ -1,51 +1,65 @@
 
-<div class="question row">
-  <div class="col-md-2">
-    <div class="vote-sidebar text-center">
-      <div class="vote-div">
-        <span class="vote upvote" {{action "upvote"}}></span>
-      </div>
-      <div class="vote-div">
-        {{model.votes}}
-      </div>
-      <div class="vote-div">
-        <span class="vote downvote" {{action "downvote"}}></span>
+<div class="question">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="vote-sidebar text-center">
+        <div class="vote-div">
+          <span class="vote upvote" {{action "upvote"}}></span>
+        </div>
+        <div class="vote-div">
+          {{model.votes}}
+        </div>
+        <div class="vote-div">
+          <span class="vote downvote" {{action "downvote"}}></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="question-content col-md-7">
-    <h2 class="page-header">
+    <div class="question-content col-md-7">
+      <h2 class="page-header">
+        {{#if isEditing}}
+          {{input type="text" class="form-control" value=model.title}}
+        {{else}}
+          {{model.title}}
+        {{/if}}
+      </h2>
+      <div class="question-text">
+        {{#if isEditing}}
+          {{textarea rows="10" class="form-control" value=model.text}}
+        {{else}}
+          {{model.text}}
+        {{/if}}
+      </div>
+
       {{#if isEditing}}
-        {{input type="text" class="form-control" value=model.title}}
+        <span class="save" {{action "save"}}>Save Changes</span>
       {{else}}
-        {{model.title}}
+        <span class="edit" {{action "edit"}}>Edit</span>
       {{/if}}
-    </h2>
-    <div class="question-text">
-      {{#if isEditing}}
-        {{textarea rows="10" class="form-control" value=model.text}}
-      {{else}}
-        {{model.text}}
-      {{/if}}
+      <span class="delete text-danger" {{action "delete"}}>Delete</span>
     </div>
 
-    {{#if isEditing}}
-      <span class="save" {{action "save"}}>Save Changes</span>
-    {{else}}
-      <span class="edit" {{action "edit"}}>Edit</span>
-    {{/if}}
-    <span class="delete text-danger" {{action "delete"}}>Delete</span>
+    <div class="col-md-3">
+      <div class="question-author-info">
+        <div>
+          asked by {{model.author}}
+        </div>
+        <div>
+          {{post-date-format model.timestamp}}
+        </div>
+      </div>
+      <span class="answer">{{#link-to "new-answer" model}}Add an Answer{{/link-to}}</span>
+    </div>
   </div>
-
-  <div class="col-md-3">
-    <div class="question-author-info">
-      <div>
-        asked by {{model.author}}
-      </div>
-      <div>
-        {{post-date-format model.timestamp}}
-      </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      {{outlet}}
     </div>
   </div>
 </div>
+
+<ul>
+  {{#each answer in model.answers}}
+    <li>{{answer.text}}</li>
+  {{/each}}
+</ul>

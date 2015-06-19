@@ -2,7 +2,7 @@
   border-right: 1px solid #898988;
   border-left: 1px solid #898988;
   margin-top:50px;
-  min-height:500px;
+  min-height:300px;
   -moz-box-shadow:    0px 4px 4px 2px #898988;
   -webkit-box-shadow: 0px 4px 4px 2px #898988;
   box-shadow:         0px 4px 4px 2px #898988;
@@ -78,10 +78,6 @@
   opacity: 0.5;
 }
 
-.question {
-}
-
-
 /* found this idea on css-tricks! */
 .upvote {
   width: 0;
@@ -131,11 +127,17 @@
 }
 
 .question-content {
-  min-height: 500px;
+  min-height: 300px;
 }
 
 .delete {
   position:absolute;
   bottom: 20px;
-  right: 20px;
+  right: 150px;
+}
+
+.answer {
+  position:absolute;
+  top: 260px;
+  right: 25px;
 }
