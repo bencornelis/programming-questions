@@ -11,7 +11,8 @@ export default Ember.Controller.extend({
         text: this.get('text'),
         author: this.get('author'),
         votes: 0,
-        views: 0
+        views: 0,
+        timestamp: new Date()
       });
       this.get('selectedTags').forEach(function(tag) {
         newQuestion.get('tags').pushObject(tag);

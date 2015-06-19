@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div class="question-content col-md-8">
+  <div class="question-content col-md-7">
     <h2 class="page-header">
       {{#if isEditing}}
         {{input type="text" class="form-control" value=model.title}}
@@ -38,9 +38,14 @@
     <span class="delete text-danger" {{action "delete"}}>Delete</span>
   </div>
 
-  <div class="col-md-2">
+  <div class="col-md-3">
     <div class="question-author-info">
-      asked by {{model.author}}
+      <div>
+        asked by {{model.author}}
+      </div>
+      <div>
+        {{post-date-format model.timestamp}}
+      </div>
     </div>
   </div>
 </div>

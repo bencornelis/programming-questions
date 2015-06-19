@@ -6,6 +6,7 @@ export default DS.Model.extend({
   author: DS.attr('string'),
   votes: DS.attr('number'),
   views: DS.attr('number'),
+  timestamp: DS.attr('date'),
   tags: DS.hasMany('tag', {async: true}),
   answers: DS.hasMany('answer', {async: true})
 });

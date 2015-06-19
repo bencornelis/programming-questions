@@ -6,5 +6,8 @@ export default Ember.Component.extend({
   }.property('question.answers'),
   textSnippet: function() {
     return this.get('question.text').slice(0, 10) + "...";
-  }.property('question.text')
+  }.property('question.text'),
+  authorDescription: function() {
+    return 'asked by ' + this.get('question.author');
+  }.property('question.author')
 });
