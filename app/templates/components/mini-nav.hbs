@@ -1,0 +1,9 @@
+<div id="mini-nav">
+  <ul class="pull-right list-unstyled list-inline">
+    {{#each item in items}}
+      <li {{bindAttr id="item.route"}} class="nav-link" {{action "click" item}}>
+        {{item.name}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

@@ -2,10 +2,12 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" role='navigation'>
     <ul class='nav navbar-nav'>
       <li>{{#link-to 'questions'}}Epicodus Questions{{/link-to}}</li>
-      <li>{{#link-to 'questions'}}Questions{{/link-to}}</li>
-      <li>{{#link-to 'tags'}}Tags{{/link-to}}</li>
     </ul>
   </nav>
 
-{{outlet}}
+  {{mini-nav items=navItems currentControllerBinding="controller"}}
+
+  <div id="main" class="col-md-6 col-md-offset-1">
+    {{outlet}}
+  </div>
 </div>

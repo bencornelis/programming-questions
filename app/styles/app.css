@@ -1,0 +1,30 @@
+#main {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  margin-top:200px;
+  min-height:500px;
+}
+
+#mini-nav {
+  margin-top:100px;
+}
+
+#mini-nav li {
+  padding: 10px;
+  margin:5px;
+  background-color: #222222;
+}
+
+.nav-link {
+  color: #898988 !important;
+}
+
+.nav-link:hover {
+  color: white !important;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.selected {
+  color: white !important;
+}
