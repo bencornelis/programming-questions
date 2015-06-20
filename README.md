@@ -1,7 +1,13 @@
-# Questions
+# Programming Questions Forum
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+##About
+
+This app is built with Ember CLI and Firebase on the backend. It has the following features:
+
+- users can post questions with title, text, author, and subject tags
+- users can view, edit, delete and upvote/downvote questions
+- users can answer questions and upvote/downvote answers
+- useful stack overflow links are provided for questions based on title and tags
 
 ## Prerequisites
 
@@ -50,4 +56,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

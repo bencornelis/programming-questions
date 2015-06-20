@@ -2,9 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   init: function() {
-    this.set('helpfulLinks', []);
+    this.set('helpfulLinks', [])
   },
   collectHelpfulLinks: function() {
+    if (this.get('helpfulLinks.length') > 0) {
+      this.set('helpfulLinks', []);
+    }
+
     var question = this.get('model');
 
     //build the search url
@@ -17,7 +21,9 @@ export default Ember.Controller.extend({
     url += "&q=" + searchText;
     url += "&tagged=";
     question.get('tags').forEach(function(tag) {
-      url += tag.get('name').replace('-', '.') + ";"
+      if (tag.get('name')) {
+        url += tag.get('name').replace('-', '.') + ";";
+      }
     });
     url = url.slice(0, -1);
 
