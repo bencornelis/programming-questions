@@ -1,10 +1,12 @@
 # Programming Questions Forum
 
+June 19, 2015
+
 ##About
 
-This app is built with Ember CLI and Firebase on the backend. It has the following features:
+This app is built with Ember CLI using Firebase on the backend. It has the following features:
 
-- users can post questions with title, text, author, and subject tags
+- users can post questions with title, text, author, and add subject tags
 - users can view, edit, delete and upvote/downvote questions
 - users can answer questions and upvote/downvote answers
 - useful stack overflow links are provided for questions based on title and tags
